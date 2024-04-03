@@ -1,0 +1,276 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!206 &-8115593363237682769
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: crouch
+  m_Childs:
+  - serializedVersion: 2
+    m_Motion: {fileID: -203655887218126122, guid: a6037b5061dc86a448e485231a5d1b36,
+      type: 3}
+    m_Threshold: 0.33333334
+    m_Position: {x: 0, y: 1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: -203655887218126122, guid: 33210c085cc4cb24a9e30452ca38ad9b,
+      type: 3}
+    m_Threshold: 0.6666667
+    m_Position: {x: 0, y: -1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: -203655887218126122, guid: 127d13c4760a8a34cb39b067c9d6bf60,
+      type: 3}
+    m_Threshold: 1
+    m_Position: {x: -1, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: -203655887218126122, guid: cfd5c418e13341c46af589e5a1b9f773,
+      type: 3}
+    m_Threshold: 1.3333333
+    m_Position: {x: 1, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  m_BlendParameter: SpeedX
+  m_BlendParameterY: SpeedZ
+  m_MinThreshold: 0.33333334
+  m_MaxThreshold: 1.3333333
+  m_UseAutomaticThresholds: 0
+  m_NormalizedBlendValues: 0
+  m_BlendType: 2
+--- !u!1102 &-2063140025198714230
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Blend Tree
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 8987851786832850139}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!91 &9100000
+AnimatorController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AC_Player
+  serializedVersion: 5
+  m_AnimatorParameters:
+  - m_Name: Crouch-Stand
+    m_Type: 1
+    m_DefaultFloat: 2
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: SpeedX
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: SpeedZ
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  m_AnimatorLayers:
+  - serializedVersion: 5
+    m_Name: Base Layer
+    m_StateMachine: {fileID: 4133799583037744366}
+    m_Mask: {fileID: 0}
+    m_Motions: []
+    m_Behaviours: []
+    m_BlendingMode: 0
+    m_SyncedLayerIndex: -1
+    m_DefaultWeight: 0
+    m_IKPass: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Controller: {fileID: 9100000}
+--- !u!1107 &4133799583037744366
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Base Layer
+  m_ChildStates:
+  - serializedVersion: 1
+    m_State: {fileID: -2063140025198714230}
+    m_Position: {x: 470, y: 130, z: 0}
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: -2063140025198714230}
+--- !u!206 &5286090604634306137
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Stand
+  m_Childs:
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400002, guid: a3422ad278cd9a94aa3da8e6bff9deea, type: 3}
+    m_Threshold: 0
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400054, guid: bd1c2e9064da28e4fb0fe4a3f6ff4e33, type: 3}
+    m_Threshold: 1
+    m_Position: {x: -1.8950764, y: 0.0006361203}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400056, guid: bd1c2e9064da28e4fb0fe4a3f6ff4e33, type: 3}
+    m_Threshold: 2
+    m_Position: {x: 1.8925955, y: -0.0012687225}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400058, guid: bd1c2e9064da28e4fb0fe4a3f6ff4e33, type: 3}
+    m_Threshold: 3
+    m_Position: {x: -0.011385427, y: -1.8538179}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400048, guid: bd1c2e9064da28e4fb0fe4a3f6ff4e33, type: 3}
+    m_Threshold: 4
+    m_Position: {x: -0.0012106609, y: 1.8949654}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400060, guid: bd1c2e9064da28e4fb0fe4a3f6ff4e33, type: 3}
+    m_Threshold: 5
+    m_Position: {x: -1.3471601, y: -1.323288}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400062, guid: bd1c2e9064da28e4fb0fe4a3f6ff4e33, type: 3}
+    m_Threshold: 6
+    m_Position: {x: 1.3341995, y: -1.304004}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400052, guid: bd1c2e9064da28e4fb0fe4a3f6ff4e33, type: 3}
+    m_Threshold: 7
+    m_Position: {x: 1.3388321, y: 1.3386241}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400050, guid: bd1c2e9064da28e4fb0fe4a3f6ff4e33, type: 3}
+    m_Threshold: 8
+    m_Position: {x: -1.3405663, y: 1.3408747}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400032, guid: 154a724602422044c91070a5f3c67c11, type: 3}
+    m_Threshold: 9
+    m_Position: {x: 0.03366383, y: 3.6030414}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  m_BlendParameter: SpeedX
+  m_BlendParameterY: SpeedZ
+  m_MinThreshold: 0
+  m_MaxThreshold: 9
+  m_UseAutomaticThresholds: 0
+  m_NormalizedBlendValues: 0
+  m_BlendType: 2
+--- !u!206 &8987851786832850139
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Crouch_stand
+  m_Childs:
+  - serializedVersion: 2
+    m_Motion: {fileID: -203655887218126122, guid: 840a82c04924c4f4192622b2a768388f,
+      type: 3}
+    m_Threshold: 0
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Crouch-Stand
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: -8115593363237682769}
+    m_Threshold: 1
+    m_Position: {x: -1, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 5286090604634306137}
+    m_Threshold: 2
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  m_BlendParameter: Crouch-Stand
+  m_BlendParameterY: SpeedY
+  m_MinThreshold: 0
+  m_MaxThreshold: 2
+  m_UseAutomaticThresholds: 0
+  m_NormalizedBlendValues: 0
+  m_BlendType: 0
